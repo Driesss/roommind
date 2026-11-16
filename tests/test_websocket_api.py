@@ -3836,6 +3836,7 @@ def test_custom_override_stays_within_the_climate_entity_limits(side):
             schema({**base, side: value})
     assert schema({**base, side: 5})[side] == 5.0
 
+
 @pytest.mark.asyncio
 async def test_override_set_until_next_change(ws_hass, store, connection):
     """until_schedule_change holds until the schedule's next change and, with presence, remembers it."""
